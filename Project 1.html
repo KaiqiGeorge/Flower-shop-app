@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowers</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #35858b;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid #35858b;
+        padding: 10px;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 8px;
+        width: 550px;
+      }
+      p {
+        line-height: 1.5;
+        padding-top: 10px;
+        margin: 20px 0 10px;
+        max-width: 100%;
+        font-size: medium;
+      }
+      .link {
+        color: #35858b;
+        font-size: 18px;
+      }
+      .link:hover {
+        cursor: pointer;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        background-color: #b4cfb0;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 25px;
+        border: 1px solid whitesmoke;
+      }
+      button:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin-top: 45px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love flowers.</h1>
+      <h2>Especially Common Sunflower.</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/714/original/sunflower_2.jpeg?1652997639"
+        alt="sunflower"
+      />
+      <p>
+        The common sunflower (Helianthus annuus) is a large annual forb of the
+        genus Helianthus grown as a crop for its edible oil and edible fruits.
+        This sunflower species is also used as wild bird food, as livestock
+        forage (as a meal or a silage plant), in some industrial applications,
+        and as an ornamental in domestic gardens. The plant was first
+        domesticated in the Americas. Wild Helianthus annuus is a widely
+        branched annual plant with many flower heads. The domestic sunflower,
+        however, often possesses only a single large inflorescence (flower head)
+        atop an unbranched stem.
+      </p>
+      <a
+        href="http://en.volupedia.org/wiki/Common_sunflower"
+        target="_blank"
+        class="link"
+      >
+        Read more in wikipedia.
+      </a>
+
+      <button>👉 Buy some flowers</button>
+      <footer>Coded by Kaiqi George</footer>
+    </div>
+    <script>
+      let button = document.querySelector("button");
+      button.onclick = function sendFlowers() {
+        let name = prompt("What is your name?");
+        let flower = prompt("What is your favorite flower?");
+        let address = prompt("What is your address?");
+        let h1 = document.querySelector("h1");
+        h1.innerHTML =
+          "Thank you " +
+          name +
+          "! We will send 7 " +
+          flower +
+          " to " +
+          address +
+          " within a week.";
+      };
+    </script>
+  </body>
+</html>
